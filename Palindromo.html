@@ -9,32 +9,36 @@
 </style>
 </head>
 
+<body>
 
-
-<body onload="Listener('envioPalavra')">
-    <div class="form">
-        <label for="Palindromo">Digite sua palavra: </label><input type="text" id="Palindromo" class="Palindromo">
-        <input type="submit" value="Enviar palavra" class="envioPalavra">
-      </div>
+    <div>
+        <label for="p">Digite sua palavra: </label>  
+        <input type="text" id="p" class="p">
+        <button id="verifica">OK</button>
+    </div>
 
 
 
       <script type="text/JavaScript">
-        function conferirPalavra(){
-            var palindromo = "";
+
+        document.getElementById("verifica").addEventListener('click',function(){
+            let p = "";
+            let palavra = document.getElementById("p").value;
     
-            for(var i = palavra.length - 1; i >= 0; i--) {
-                palindromo += palavra[i]
+            for(let i = palavra.length - 1; i >= 0; i--) {
+                p += palavra.charAt(i);
             }
     
-            if (palavra == palindromo) {
-                return "É UM PALÍNDROMO"
+            if (p == palavra) {
+                alert(palavra = "É UM PALÍNDROMO")
             } else {
-                return "NÃO É UM PALÍNDROMO"
+                alert(palavra = "NÃO É UM PALÍNDROMO")
         }
     
-    }
-    
+            
+
+           // console.log("ok");
+        });
     </script>
 
 </body>
