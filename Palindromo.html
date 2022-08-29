@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ativiades</title>
+<style>
+
+</style>
+</head>
+
+<body onload="Listener()">
+    <div class="form">
+        <label for="campoPalavra">Digite sua palavra: </label><input type="text" id="campoPalavra" class="campoPalavra">
+        <input type="submit" value="Enviar palavra" class="envioPalavra">
+      </div>
+
+</body>
+
+
+
+
+<script>
+    function conferirPalavra(){
+        var palindromo = "";
+
+        for(var i = palavra.length - 1; i >= 0; i--) {
+            palindromo += palavra[i]
+        }
+
+        if (palavra == palindromo) {
+            return "SIM, SOU UM PALÍNDROMO"
+        } else {
+            return "INFELIZMENTE, NÃO SOU UM PALÍNDROMO"
+    }
+
+}
+
+
+
+</script>
