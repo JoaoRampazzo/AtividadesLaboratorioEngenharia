@@ -1,0 +1,7 @@
+
+//Criando paragrafo usando javascript por react //
+JSX:
+const paragrafo = () =>{
+    return <p>Um texto</p>
+}
+
