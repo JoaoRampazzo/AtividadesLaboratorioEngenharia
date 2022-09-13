@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo6 React</title>
+    <meta charset="UTF-8">
+
+    <script  src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        let word ='Venha estudar na fatec';
+        let word2 = '';
+        let i = 0;
+
+        function tick(){
+            word2 = word2 + word[i];
+        
+            const element =
+            <div>
+                <h1>{word2}</h1>
+            </div>
+            if( i < word.length){
+                ReactDOM.render(element,document.getElementById('root'));
+                i++
+            }
+            
+        }
+
+
+        setInterval(tick, 100);
+    </script>
+</body>
+</html>
