@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--2. Pesquise a utilização do método setTimeout() 
+        e implemente um relógio que atualize o horário a cada segundo:
+    -->
+    <link rel="stylesheet" href="style2.css">
+    
+    <meta charset="utf-8">
+    <title>Relógio</title>
+    <script type="text/javascript">
+
+        function showTime() {
+
+            // return new date and time
+            let dateTime= new Date();
+            
+            // returns the current local time
+            let time = dateTime.toLocaleTimeString();
+            
+            var display = document.querySelector('.display');
+
+            //set display the content from let time
+            display.textContent = time;
+            //"print" on console
+            console.log(time);
+            
+            //update after 1 second
+            setTimeout(showTime, 1000);
+        }
+
+        function showDay(){
+            let dateTime2= new Date();
+            let dia = (dateTime2.toLocaleDateString('pt-BR'));
+
+            //display
+            var data = document.querySelector('.data');
+            data.textContent = dia;
+            console.log(dia);
+        }
+        function ds(){
+                const days = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", 
+                "Sexta-feira", "Sábado"];
+
+                let date = new Date();
+                // returns the current local time
+                let day= days[date.getDay()];
+                
+                var ds = document.querySelector('.ds');               
+                //set display the content from let time
+                ds.textContent = day;
+                //"print" on console
+                console.log(day);
+        }
+        
+        
+    </script>
+</head>
+
+<body onload="showTime(),showDay(),ds()">
+    <div class="relogio">
+        <div class="ds">dia</div>
+        <div class="display">00:00:00</div>
+        <div class='data'>00/00/0000</div>
+        
+    </div>
+
+    <button class="fococentral"><a class="fococentral-clicavel" href="index.html">Voltar</a></button>
+</body>
+</html>
