@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"><title>Carro</title>
+    </head>
+    <body>
+        <h1>ATividade Carros</h1>
+       
+        <div id="caracteristicas">
+            <label for="marca">Digite a marca do carro: </label>
+            <input type="text" id="marca" class="caracteristica marca"><br>
+
+            <label for="modelo">Digite o modelo: </label>
+            <input type="text" id="modelo" class="caracteristica modelo"><br>
+            
+            <label for="ano">Digite o ano: </label>
+            <input type="number" id="ano" class="caracteristica ano"><br>
+
+            <label for="cor">Digite o cor: </label>
+            <input type="text" id="cor" class="caracteristica cor"><br>
+
+            <label for="quilometragem">Digite a quilometragem: </label>
+            <input type="number" id="quilometragem" class="caracteristica quilometragem"><br>
+
+            <label for="valor_fipe">Digite o valor_fipe: </label>
+            <input type="number" id="valor_fipe" class="caracteristica valor_fipe"><br>
+
+            <button id="verifica_carro"></button>
+   
+        </div>
+        <script>
+        let marca, modelo, ano, cor, quilometragem, valor_fipe = "";
+        document.getElementById("carro").addEventListener('click', function() { 
+            marca = document.getElementById("marca").value;
+            modelo = document.getElementById("modelo").value;
+            ano = document.getElementById("ano").value;
+            cor = document.getElementById("cor").value;
+            quilometragem = document.getElementById("quilometragem").value;
+            valor_fipe = document.getElementById("valor_fipe").value;
+
+            console.log('marca do carro',marca,'modelo do carro', modelo, 'ano do carro', ano, 'cor do carro', cor, 'quilometragem do carro', 
+                quilometragem, 'valor_fipe do carro', valor_fipe);
+           
+            });      
+
+        </script>
+        
+    </body>
+</html>
