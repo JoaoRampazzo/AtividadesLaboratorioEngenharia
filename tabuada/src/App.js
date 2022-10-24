@@ -3,18 +3,27 @@ import Titulo from './Titulo';
 import Titulo2 from './Titulo2';
 import Tabuada from './Tabuada';
 import Cores from './Cores';
+import Mensagem from './Mensagem';
+import Header from './Header';
 
-let n = prompt("Digite um numero", "5")
+
+
+let n = prompt("Digite um numero", "5") 
 function App() {
   return (
-    <div>
+   /* <div>
       <Cores />
       <Titulo titulo = "Fatec"
               texto = "Faculdade de Tecnologia de Presidente Prudente"
               link = "https://www.fatecsp.edu.br"/>
       <Titulo2 />
-      <Tabuada numero = {n}/>
+      <Tabuada numero = {n}/>*/
+    <div>
+      <Mensagem></Mensagem>
+
+      <Header>let favcol = "azul"</Header>
     </div>
+
   );
 
 
