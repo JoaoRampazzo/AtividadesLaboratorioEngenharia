@@ -1,16 +1,15 @@
 import React from 'react';
 
-class SH extends React.Component {
-   constructor() {
-      super();
-      this.state = { cor: '#000' };
+class Sh extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = { color: '#000f' };
    }
    render() {
       return (
          <div>
-            <h1 style={{ cor: this.state.cor }}>Tutorialspoint</h1>
-            <button onClick={() => this.setState({ cor: '#ff0000' })}>
-               Altera a cor
+            <h1 style={{ color: this.state.color }}>FATEC</h1>
+            <button onClick={() => this.setState({ color: '#00588F' })}>
             </button>
             <MudaCor />
          </div>
@@ -28,9 +27,9 @@ class MudaCor extends React.Component {
    render() {
       return (
          <div>
-            <h1>FATEC</h1>
+            <h1>fatec</h1>
          </div>
       );
    }
 }
-export default SH;
+export default Sh;

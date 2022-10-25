@@ -5,9 +5,9 @@ import Tabuada from './Tabuada';
 import Cores from './Cores';
 import Mensagem from './Mensagem';
 import Header from './Header';
-import SH from './ShouldComponentUpdate';
 import Snap from './GetSnapshotBeforeUpdate';
-
+import Sh from './ShouldComponentUpdate';
+import Container from './Unmounting';
 
 
 let n = prompt("Digite um numero", "5") 
@@ -20,14 +20,15 @@ function App() {
               link = "https://www.fatecsp.edu.br"/>
       <Titulo2 />
       <Tabuada numero = {n}/>*/
-    <div>
-      <Mensagem></Mensagem>
+    <div>  
+    <Mensagem></Mensagem>
 
-      <Snap></Snap>
+<Snap></Snap>
 
-      <SH></SH>
+<Header favcol="Azul"></Header>
 
-      <Header favcol="Azul"></Header>
+<Sh></Sh>
+    <Container></Container>
     </div>
 
   );
