@@ -5,6 +5,8 @@ import Tabuada from './Tabuada';
 import Cores from './Cores';
 import Mensagem from './Mensagem';
 import Header from './Header';
+import Att3 from './GetSnapshotBeforeUpdate';
+import Snap from './GetSnapshotBeforeUpdate';
 
 
 
@@ -20,6 +22,8 @@ function App() {
       <Tabuada numero = {n}/>*/
     <div>
       <Mensagem></Mensagem>
+
+      <Snap></Snap>
 
       <Header favcol="Azul"></Header>
     </div>
