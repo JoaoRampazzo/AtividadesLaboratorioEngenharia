@@ -5,9 +5,9 @@ class Header extends React.Component{
         super(props);
         this.state = {corfavorita: "Vermelho"};
     }
-    static getDerivedStateFromProps(props,state){
+    /*static getDerivedStateFromProps(props,state){
         return {corfavorita: props.favcol};
-    }
+    }*/
 
     componentDidMount(){
         setTimeout(()=>{
@@ -15,7 +15,7 @@ class Header extends React.Component{
         },1000);
     }
 
-    
+
 
 
     render(){
