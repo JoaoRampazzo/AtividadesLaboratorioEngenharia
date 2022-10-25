@@ -21,7 +21,7 @@ function App() {
     <div>
       <Mensagem></Mensagem>
 
-      <Header>let favcol = "azul"</Header>
+      <Header favcol="Azul"></Header>
     </div>
 
   );
