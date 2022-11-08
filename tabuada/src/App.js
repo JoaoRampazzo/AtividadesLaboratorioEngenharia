@@ -8,35 +8,92 @@ import Header from './Header';
 import Snap from './GetSnapshotBeforeUpdate';
 import Sh from './ShouldComponentUpdate';
 import Container from './Unmounting';
+import TodoList from "./TodoList";
 
 
+class App extends React.Component{
+  constructor(props){
+    super(props);
+
+    this.state={
+      itens: [],
+      text: ''
+    }
+  }
+
+
+  handleChange = (e) =>{
+    this.setState({text: e.target.value})
+  }
+
+  handleSubmit = (e) =>{
+    e.preventDefault();
+
+    if(!this.state.text.length){
+      return;
+    }
+    const item ={
+      id: Date.now(),
+      text: this.state.text
+    }
+    this.setState(state=>({
+      itens:state.itens.concat(item),
+      text: ''
+    }))
+  }
+
+
+  render(){
+    return(
+      <div>
+        <h3>Tarefas</h3>
+        <TodoList itens={this.state.itens} />
+        <br />
+        <form onSubmit={this.handleSubmit}>
+          <input id="new-todo" onChange={this.handleChange} value={this.state.text}/>
+          <button>Inserir</button>
+        </form>
+
+      </div>
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+/*
 let n = prompt("Digite um numero", "5") 
 function App() {
   return (
-   /* <div>
+    <div>
       <Cores />
       <Titulo titulo = "Fatec"
               texto = "Faculdade de Tecnologia de Presidente Prudente"
               link = "https://www.fatecsp.edu.br"/>
       <Titulo2 />
-      <Tabuada numero = {n}/>*/
+      <Tabuada numero = {n}/>
     <div>  
     <Mensagem></Mensagem>
 
-<Snap></Snap>
+    <Snap></Snap>
 
-<Header favcol="Azul"></Header>
+    <Header favcol="Azul"></Header>
 
-<Sh></Sh>
+    <Sh></Sh>
+
     <Container></Container>
+
     </div>
 
   );
+  }
+  */
 
-
-  
-  
-  
-}
 
 export default App;
